@@ -22,6 +22,26 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
 
+## Python learning scripts
+
+This repo also includes small Python utilities that connect to a modern frontend/content workflow.
+
+### Create an MDX blog draft
+
+Preview a generated MDX file without changing anything:
+
+```bash
+python3 scripts/create_mdx_post.py "My First Python Content Script"
+```
+
+Actually create the draft:
+
+```bash
+python3 scripts/create_mdx_post.py "My First Python Content Script" --write
+```
+
+The script creates drafts in `content/blog/`, refuses to overwrite existing files, and keeps generated content separate from the production app code in `src/`.
+
 ## License
 
 This site template is a commercial product and is licensed under the [Tailwind Plus license](https://tailwindcss.com/plus/license).
